@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – Mojang Studios</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-block logo-m">M</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="products.html" class="nav-link">GAMES</a></li>
+      <li><a href="aboutus.html" class="nav-link">STUDIO</a></li>
+      <li><a href="contactus.html" class="nav-link active">NEWS</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- LEFT: Contact Info + Form -->
+    <div class="contact-left">
+
+      <h2 class="contact-heading">Contact Information</h2>
+
+      <div class="contact-info-row">
+        <div class="contact-info-item">
+          <span class="contact-info-label">EMAIL</span>
+          <span class="contact-info-value">support@mojang.com</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-label">PHONE</span>
+          <span class="contact-info-value">+46 123 456 789</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-label">ADDRESS</span>
+          <span class="contact-info-value">Stockholm HQ</span>
+        </div>
+      </div>
+
+      <h3 class="form-heading">Send Us a Message</h3>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" class="form-input"/>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" class="form-input"/>
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Write your message..." class="form-input form-textarea"></textarea>
+        </div>
+        <button type="submit" class="btn btn-red">SEND MESSAGE</button>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <i class="fas fa-check-circle"></i> Message sent! We'll get back to you soon.
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Map -->
+    <div class="contact-right">
+      <h2 class="contact-heading">Our HQ Location</h2>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130357.72024745!2d17.9266!3d59.3293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sStockholm%2C%20Sweden!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mojang Studios Stockholm HQ">
+        </iframe>
+      </div>
+      <p class="map-caption">Visit us in the heart of Stockholm</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Mojang Studios</p>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('formSuccess').style.display = 'flex';
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>
